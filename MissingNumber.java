@@ -1,3 +1,4 @@
+//https://leetcode.com/problems/missing-number/description/
 import java.util.*;
 class MissingNumber {
     public int missingNumber(int[] nums) {
