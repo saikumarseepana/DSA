@@ -1,4 +1,4 @@
-https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/
+//https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/
 import java.util.*;
 class DisappearedNumbers {
     public List<Integer> findDisappearedNumbers(int[] nums) {
