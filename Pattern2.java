@@ -12,3 +12,10 @@ public class Pattern2 {
         }
     }
 }
+
+//pattern 2
+// *
+// **
+// ***
+// ****
+// *****
