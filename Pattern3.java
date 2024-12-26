@@ -12,7 +12,7 @@ public class Pattern3 {
         }
     }
 }
-
+   
 //pattern 3
 // *****
 // ****
