@@ -1,7 +1,8 @@
 import java.util.*;
 public class SubsequenceRec{
     public static void main(String[] args){
-        System.out.println(subseqRet("", "abc"));
+        // System.out.println(subseqAsciiRet("", "abc"));
+        subseqAscii("", "abc");
     }
 
     static void subseq(String p, String up){
@@ -29,5 +30,36 @@ public class SubsequenceRec{
 
         left.addAll(right);
         return left;
+    }
+
+    static ArrayList<String> subseqAsciiRet(String p, String up){
+        
+        if(up.isEmpty()){
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p);
+            return list;
+        }
+
+        char ch = up.charAt(0);
+        ArrayList<String> first = subseqAsciiRet(p + (ch + 0), up.substring(1));
+        ArrayList<String> second = subseqAsciiRet(p, up.substring(1));
+        // ArrayList<String> third = subseqAsciiRet(p + (ch + 0), up.substring(1));
+
+
+        first.addAll(second);
+        // first.addAll(third);
+
+        return first;
+    }
+
+    static void subseqAscii(String p, String up){
+        if(up.isEmpty()){
+            System.out.println(p);
+            return;
+        }
+
+        char ch = up.charAt(0);
+        subseqAscii(p + (ch + 0), up.substring(1));
+        subseqAscii(p, up.substring(1));
     }
 }
